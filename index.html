@@ -158,12 +158,12 @@
       
       <!-- Clean Single-Line Nav Links -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300 whitespace-nowrap">
-        <a href="#yamalar" onclick="switchBackground('portal')" class="hover:text-brand-cyan transition">Tüm Yamalar</a>
-        <a href="#expanse" onclick="switchBackground('expanse')" class="hover:text-brand-cyan transition flex items-center gap-2">
+        <a href="#yamalar" onclick="goToSection('yamalar', 'portal', event)" class="hover:text-brand-cyan transition">Tüm Yamalar</a>
+        <a href="#expanse" onclick="goToExpanse(event)" class="hover:text-brand-cyan transition flex items-center gap-2">
           <span>The Expanse</span>
           <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-500/30">v1.0</span>
         </a>
-        <a href="#codevein" onclick="goToCodeVein()" class="hover:text-purple-400 transition flex items-center gap-2">
+        <a href="#codevein" onclick="goToCodeVein(event)" class="hover:text-purple-400 transition flex items-center gap-2">
           <span>Code Vein</span>
           <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-purple-950 text-purple-300 border border-purple-500/30">v1.0</span>
         </a>
@@ -174,19 +174,19 @@
           </button>
           <div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50">
             <div class="glass-card rounded-xl p-2 min-w-[210px] shadow-2xl border border-white/10 space-y-1">
-              <a href="#expanse-surum-notlari" onclick="switchBackground('expanse')" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-cyan-950/60 text-xs text-slate-200 hover:text-cyan-300 transition">
+              <a href="#expanse-surum-notlari" onclick="goToSection('expanse-surum-notlari', 'expanse', event)" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-cyan-950/60 text-xs text-slate-200 hover:text-cyan-300 transition">
                 <span>The Expanse (v1.0)</span>
                 <span class="text-[10px] font-mono text-cyan-400 bg-cyan-950 px-1.5 py-0.5 rounded border border-cyan-800">5 Not</span>
               </a>
-              <a href="#codevein-surum-notlari" onclick="goToCodeVein()" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-purple-950/60 text-xs text-slate-200 hover:text-purple-300 transition">
+              <a href="#codevein-surum-notlari" onclick="goToSection('codevein-surum-notlari', 'codevein', event)" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-purple-950/60 text-xs text-slate-200 hover:text-purple-300 transition">
                 <span>Code Vein (v1.0)</span>
                 <span class="text-[10px] font-mono text-purple-400 bg-purple-950 px-1.5 py-0.5 rounded border border-purple-800">6 Not</span>
               </a>
             </div>
           </div>
         </div>
-        <a href="#gelecek" onclick="switchBackground('portal')" class="hover:text-brand-cyan transition">Gelecek Projeler</a>
-        <a href="#hakkinda" class="hover:text-brand-cyan transition">Hakkımızda</a>
+        <a href="#gelecek" onclick="goToSection('gelecek', 'portal', event)" class="hover:text-brand-cyan transition">Gelecek Projeler</a>
+        <a href="#hakkinda" onclick="goToSection('hakkinda', null, event)" class="hover:text-brand-cyan transition">Hakkımızda</a>
       </nav>
 
       <!-- Steam Profile CTA -->
@@ -227,17 +227,17 @@
 
         <!-- CTA Buttons -->
         <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <button type="button" onclick="goToExpanse()" class="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-cyan to-brand-blue text-slate-950 font-bold font-display text-base sm:text-lg tracking-wide hover:brightness-110 transition transform hover:-translate-y-0.5 neon-cyan">
+          <button type="button" onclick="goToExpanse(event)" class="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-cyan to-brand-blue text-slate-950 font-bold font-display text-base sm:text-lg tracking-wide hover:brightness-110 transition transform hover:-translate-y-0.5 neon-cyan">
             <span>The Expanse (v1.0)</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
           </button>
 
-          <button type="button" onclick="goToCodeVein()" class="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white font-bold font-display text-base sm:text-lg tracking-wide hover:brightness-110 transition transform hover:-translate-y-0.5 shadow-lg shadow-purple-900/40">
+          <button type="button" onclick="goToCodeVein(event)" class="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white font-bold font-display text-base sm:text-lg tracking-wide hover:brightness-110 transition transform hover:-translate-y-0.5 shadow-lg shadow-purple-900/40">
             <span>Code Vein (v1.0)</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
           </button>
           
-          <a href="#yamalar" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl glass-card text-slate-300 hover:text-white hover:border-cyan-400 transition text-sm sm:text-base font-medium">
+          <a href="#yamalar" onclick="goToSection('yamalar', 'portal', event)" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl glass-card text-slate-300 hover:text-white hover:border-cyan-400 transition text-sm sm:text-base font-medium">
             <span>Tüm Projelerimiz</span>
             <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </a>
@@ -758,7 +758,7 @@
 
     
     <!-- SECTION 2.5: SPOTLIGHT CODE VEIN -->
-    <section id="codevein" onmouseenter="switchBackground('codevein')" class="py-24 border-t border-white/10 relative transition-all duration-700 bg-dark-950/60">
+    <section id="codevein" onmouseenter="switchBackground('codevein')" class="py-24 border-t border-white/10 relative transition-all duration-700">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Spotlight Banner Card -->
@@ -1232,87 +1232,126 @@
       switchBackground('portal');
     }
 
+    let currentMode = 'portal';
+    let isManualNavigating = false;
+    let navTimeout = null;
+
     function switchBackground(mode) {
-      bgPortal.style.opacity = '0';
-      bgExpanse.style.opacity = '0';
-      bgDlc.style.opacity = '0';
-      if (bgCodevein) bgCodevein.style.opacity = '0';
+      if (!mode) return;
+      if (currentMode === mode) return;
+      currentMode = mode;
 
-      if (mode === 'codevein') {
-        if (bgCodevein) {
-          bgCodevein.style.opacity = '1';
-          bgCodevein.style.transform = 'scale(1.0)';
+      const layers = [
+        { el: bgPortal, name: 'portal' },
+        { el: bgExpanse, name: 'expanse' },
+        { el: bgDlc, name: 'dlc' },
+        { el: bgCodevein, name: 'codevein' }
+      ];
+
+      layers.forEach(({ el, name }) => {
+        if (!el) return;
+        if (name === mode) {
+          el.style.opacity = '1';
+          el.style.transform = 'scale(1.0)';
+        } else {
+          el.style.opacity = '0';
+          el.style.transform = 'scale(1.02)';
         }
-      } else if (mode === 'dlc') {
-        bgDlc.style.opacity = '1';
-        bgDlc.style.transform = 'scale(1.0)';
-      } else if (mode === 'expanse') {
-        bgExpanse.style.opacity = '1';
-        bgExpanse.style.transform = 'scale(1.0)';
-      } else {
-        bgPortal.style.opacity = '1';
-        bgPortal.style.transform = 'scale(1.0)';
+      });
+    }
+
+    function smoothScrollTo(elementId, bgMode) {
+      if (bgMode) switchBackground(bgMode);
+      isManualNavigating = true;
+      clearTimeout(navTimeout);
+      navTimeout = setTimeout(() => {
+        isManualNavigating = false;
+      }, 1100);
+
+      const targetEl = document.getElementById(elementId);
+      if (targetEl) {
+        const headerOffset = 75;
+        const elementPosition = targetEl.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
       }
     }
 
-    function goToExpanse() {
-      switchBackground('expanse');
-      const expanseSection = document.getElementById('expanse');
-      if (expanseSection) {
-        expanseSection.scrollIntoView({ behavior: 'smooth' });
-      }
+    function goToSection(elementId, bgMode, e) {
+      if (e && e.preventDefault) e.preventDefault();
+      smoothScrollTo(elementId, bgMode);
     }
 
-    function goToCodeVein() {
-      switchBackground('codevein');
-      const cvSection = document.getElementById('codevein');
-      if (cvSection) {
-        cvSection.scrollIntoView({ behavior: 'smooth' });
-      }
+    function goToExpanse(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      smoothScrollTo('expanse', 'expanse');
     }
 
-    function goToDLC() {
-      switchBackground('dlc');
-      const dlcSection = document.getElementById('dlc-section');
-      if (dlcSection) {
-        dlcSection.scrollIntoView({ behavior: 'smooth' });
-      }
+    function goToCodeVein(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      smoothScrollTo('codevein', 'codevein');
+    }
+
+    function goToDLC(e) {
+      if (e && e.preventDefault) e.preventDefault();
+      smoothScrollTo('dlc-section', 'dlc');
     }
 
     // Context-aware background transitions
     window.addEventListener('scroll', () => {
+      if (isManualNavigating) return;
+
+      const scrollY = window.scrollY || window.pageYOffset;
+      const innerH = window.innerHeight;
+
+      // 1. Top of page / Hero / Portal
+      if (scrollY < 280) {
+        switchBackground('portal');
+        return;
+      }
+
       const codeveinEl = document.getElementById('codevein');
       const dlcEl = document.getElementById('dlc-section');
       const expanseEl = document.getElementById('expanse');
-      
+
+      // 2. Code Vein Section Check
+      // Triggers reliably when top of Code Vein enters viewport (<= 70% of innerHeight)
+      // and stays active as long as Code Vein remains on screen
       if (codeveinEl) {
         const cvRect = codeveinEl.getBoundingClientRect();
-        if (cvRect.top <= window.innerHeight * 0.55 && cvRect.bottom >= window.innerHeight * 0.2) {
+        if (cvRect.top <= innerH * 0.70 && cvRect.bottom >= innerH * 0.15) {
           switchBackground('codevein');
           return;
         }
       }
 
+      // 3. DLC Section Check (nested inside Expanse)
       if (dlcEl) {
         const dlcRect = dlcEl.getBoundingClientRect();
-        if (dlcRect.top <= window.innerHeight * 0.45 && dlcRect.bottom >= window.innerHeight * 0.25) {
+        if (dlcRect.top <= innerH * 0.50 && dlcRect.bottom >= innerH * 0.25) {
           switchBackground('dlc');
           return;
         }
       }
 
+      // 4. Expanse Section Check
       if (expanseEl) {
         const expRect = expanseEl.getBoundingClientRect();
-        if (expRect.top <= window.innerHeight * 0.5 && expRect.bottom >= window.innerHeight * 0.2) {
+        if (expRect.top <= innerH * 0.70 && expRect.bottom >= innerH * 0.20) {
           switchBackground('expanse');
           return;
         }
       }
 
-      if (window.scrollY < 300) {
+      // 5. Default fallback (e.g. above Expanse in catalog)
+      if (expanseEl && expanseEl.getBoundingClientRect().top > innerH * 0.70) {
         switchBackground('portal');
       }
-    });
+    }, { passive: true });
 
     // Lightbox modal
     function openLightbox(src, caption) {
