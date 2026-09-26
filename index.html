@@ -189,13 +189,17 @@
         <a href="#hakkinda" onclick="goToSection('hakkinda', null, event)" class="hover:text-brand-cyan transition">Hakkımızda</a>
       </nav>
 
-      <!-- Steam Profile CTA -->
-      <div class="flex items-center shrink-0">
-        <a href="https://steamcommunity.com/profiles/76561198267659119/" target="_blank" rel="noopener" class="flex items-center gap-2.5 px-4 py-2 rounded-xl border border-slate-700 bg-dark-850 hover:bg-dark-800 text-slate-200 text-xs sm:text-sm font-medium transition hover:border-brand-cyan/60 hover:text-white shadow-sm whitespace-nowrap">
+      <!-- Contact CTA Group -->
+      <div class="flex items-center gap-2.5 shrink-0">
+        <a href="mailto:atillaceviri@gmail.com" title="E-Posta: atillaceviri@gmail.com" class="p-2 sm:px-3 sm:py-2 rounded-xl border border-slate-700 bg-dark-850 hover:bg-dark-800 text-slate-200 text-xs sm:text-sm font-medium transition hover:border-brand-cyan/60 hover:text-white shadow-sm flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-brand-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span class="hidden sm:inline font-mono text-xs">E-Posta</span>
+        </a>
+        <a href="https://steamcommunity.com/profiles/76561198267659119/" target="_blank" rel="noopener" class="flex items-center gap-2 px-3 py-2 rounded-xl border border-slate-700 bg-dark-850 hover:bg-dark-800 text-slate-200 text-xs sm:text-sm font-medium transition hover:border-brand-cyan/60 hover:text-white shadow-sm whitespace-nowrap">
           <svg class="w-4 h-4 fill-current text-brand-cyan shrink-0" viewBox="0 0 24 24">
             <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174l3.197-4.662a4.47 4.47 0 01-.824-2.512c0-2.485 2.015-4.5 4.5-4.5.347 0 .684.04 1.008.115l3.208-4.678A11.942 11.942 0 0012 0zm4.5 9c-1.381 0-2.5 1.119-2.5 2.5 0 .385.089.749.246 1.074l-2.029 2.959a4.49 4.49 0 01-1.217-.133l-3.327 4.852C3.125 18.73 1.5 15.565 1.5 12c0-5.799 4.701-10.5 10.5-10.5S22.5 6.201 22.5 12c0 4.095-2.348 7.641-5.753 9.387l-2.457-3.585A4.478 4.478 0 0116.5 16.5c2.485 0 4.5-2.015 4.5-4.5S18.985 9 16.5 9zm0 1.5c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z"/>
           </svg>
-          <span class="font-mono">ElijahKerpy (Steam)</span>
+          <span class="font-mono text-xs">ElijahKerpy</span>
         </a>
       </div>
     </div>
@@ -368,7 +372,7 @@
               </div>
 
               <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
-                <span class="text-xs font-mono text-slate-400">4.5 MB • ZIP</span>
+                <span class="text-xs font-mono text-slate-400">1.4 MB • ZIP</span>
                 <button type="button" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-bold font-display text-sm tracking-wide group-hover:brightness-110 transition shadow">
                   <span>İncele & İndir</span>
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -397,14 +401,18 @@
                   Sıradaki Oyun Ne Olsun?
                 </h3>
                 <p class="text-sm text-slate-400 leading-relaxed">
-                  Türkçe olarak oynamak istediğiniz bağımsız veya hikaye odaklı oyunları Steam profilimiz üzerinden bize mesaj atarak iletebilirsiniz.
+                  Türkçe olarak oynamak istediğiniz bağımsız veya hikaye odaklı oyunları Steam profilimiz veya <strong class="text-slate-200 font-mono">atillaceviri@gmail.com</strong> e-posta adresimiz üzerinden bize iletebilirsiniz.
                 </p>
               </div>
 
-              <div class="mt-6 pt-4 border-t border-white/5">
-                <a href="https://steamcommunity.com/profiles/76561198267659119/" target="_blank" rel="noopener" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-slate-700 bg-dark-850 hover:bg-dark-800 text-slate-200 text-xs font-medium transition hover:border-brand-cyan hover:text-white">
-                  <span>Steam'den Mesaj Gönder</span>
+              <div class="mt-6 pt-4 border-t border-white/5 flex flex-col sm:flex-row gap-2.5">
+                <a href="https://steamcommunity.com/profiles/76561198267659119/" target="_blank" rel="noopener" class="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg border border-slate-700 bg-dark-850 hover:bg-dark-800 text-slate-200 text-xs font-medium transition hover:border-brand-cyan hover:text-white">
+                  <span>Steam'den Mesaj</span>
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <a href="mailto:atillaceviri@gmail.com" class="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg border border-cyan-500/40 bg-cyan-950/40 hover:bg-cyan-950/80 text-cyan-300 text-xs font-medium transition hover:border-cyan-400 hover:text-white">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  <span>E-Posta Gönder</span>
                 </a>
               </div>
             </div>
@@ -817,7 +825,7 @@
                 <a href="CODE_VEIN_Turkce_Yama_v1.0_AtillaCeviri.zip" download class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white font-bold font-display text-lg tracking-wide hover:brightness-110 transition shadow-xl">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                   <span>Code Vein Yamayı İndir (v1.0)</span>
-                  <span class="text-xs px-2 py-0.5 rounded bg-black/40 font-mono">4.5 MB</span>
+                  <span class="text-xs px-2 py-0.5 rounded bg-black/40 font-mono">1.4 MB</span>
                 </a>
 
                 <a href="#codevein-kurulum" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-dark-900/90 border border-white/15 text-slate-200 font-medium hover:text-white hover:border-purple-400 transition">
@@ -953,7 +961,7 @@
                   <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">Teknik Altyapı</span>
                 </h4>
                 <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  <code class="text-emerald-300 font-mono">pakchunk0-WindowsNoEditor__TurkishFull_P.pak</code> (4.5 MB) mimarisiyle hiçbir harici enjektör veya mod yöneticisi gerektirmeden Steam sürümüne tam uyumlu, çökmesiz ve başarımları engellemeyen kompakt paket sunuldu.
+                  <code class="text-emerald-300 font-mono">pakchunk0-WindowsNoEditor__TurkishFull_P.pak</code> (1.4 MB ZIP) mimarisiyle hiçbir harici enjektör veya mod yöneticisi gerektirmeden Steam sürümüne tam uyumlu, çökmesiz ve başarımları engellemeyen kompakt paket sunuldu.
                 </p>
               </div>
             </div>
@@ -1071,12 +1079,19 @@
           </div>
         </div>
 
-        <div class="mt-8 flex justify-center">
-          <a href="https://steamcommunity.com/profiles/76561198267659119/" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-dark-850 border border-slate-700 hover:border-brand-cyan text-white text-sm font-medium transition shadow-lg hover:shadow-cyan-500/20">
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://steamcommunity.com/profiles/76561198267659119/" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-dark-850 border border-slate-700 hover:border-brand-cyan text-white text-sm font-medium transition shadow-lg hover:shadow-cyan-500/20">
             <svg class="w-5 h-5 fill-current text-brand-cyan" viewBox="0 0 24 24">
               <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174l3.197-4.662a4.47 4.47 0 01-.824-2.512c0-2.485 2.015-4.5 4.5-4.5.347 0 .684.04 1.008.115l3.208-4.678A11.942 11.942 0 0012 0zm4.5 9c-1.381 0-2.5 1.119-2.5 2.5 0 .385.089.749.246 1.074l-2.029 2.959a4.49 4.49 0 01-1.217-.133l-3.327 4.852C3.125 18.73 1.5 15.565 1.5 12c0-5.799 4.701-10.5 10.5-10.5S22.5 6.201 22.5 12c0 4.095-2.348 7.641-5.753 9.387l-2.457-3.585A4.478 4.478 0 0116.5 16.5c2.485 0 4.5-2.015 4.5-4.5S18.985 9 16.5 9zm0 1.5c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3z"/>
             </svg>
-            <span>Steam Profilimiz: Elijah / ElijahKerpy</span>
+            <span>Steam Profilimiz: ElijahKerpy</span>
+          </a>
+
+          <a href="mailto:atillaceviri@gmail.com" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-dark-850 border border-slate-700 hover:border-brand-cyan text-white text-sm font-medium transition shadow-lg hover:shadow-cyan-500/20">
+            <svg class="w-5 h-5 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span>E-Posta: atillaceviri@gmail.com</span>
           </a>
         </div>
       </div>
@@ -1161,9 +1176,15 @@
 
       <!-- Action Footer -->
       <div class="mt-6 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <a href="https://steamcommunity.com/profiles/76561198267659119/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-brand-cyan hover:underline text-xs font-mono">
-          <span>Resmi İletişim / Telif Bildirimi (Steam Profili) &rarr;</span>
-        </a>
+        <div class="flex flex-wrap items-center gap-4 text-xs font-mono">
+          <a href="mailto:atillaceviri@gmail.com" class="inline-flex items-center gap-1.5 text-brand-cyan hover:underline">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span>atillaceviri@gmail.com</span>
+          </a>
+          <a href="https://steamcommunity.com/profiles/76561198267659119/" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-slate-300 hover:text-white hover:underline">
+            <span>Steam Profili &rarr;</span>
+          </a>
+        </div>
         <button type="button" onclick="closeLegalModal()" class="px-5 py-2 rounded-xl bg-dark-900 border border-white/20 hover:border-brand-cyan text-white text-xs font-medium transition">
           Anladım, Kapat
         </button>
@@ -1175,10 +1196,15 @@
   <!-- FOOTER -->
   <footer class="border-t border-white/10 bg-dark-950 py-12 text-center">
     <div class="max-w-4xl mx-auto px-4">
-      <div class="flex items-center justify-center gap-2 mb-3">
-        <span class="font-display font-bold text-lg tracking-wider text-white">ATİLLA ÇEVİRİ</span>
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-3 text-sm">
+        <span class="font-display font-bold tracking-wider text-white">ATİLLA ÇEVİRİ</span>
         <span class="text-slate-500">•</span>
-        <a href="https://steamcommunity.com/profiles/76561198267659119/" target="_blank" rel="noopener" class="text-brand-cyan hover:underline text-sm font-medium">ElijahKerpy (Steam)</a>
+        <a href="mailto:atillaceviri@gmail.com" class="text-brand-cyan hover:underline font-mono text-xs flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span>atillaceviri@gmail.com</span>
+        </a>
+        <span class="text-slate-500">•</span>
+        <a href="https://steamcommunity.com/profiles/76561198267659119/" target="_blank" rel="noopener" class="text-slate-300 hover:text-white hover:underline text-xs font-medium">ElijahKerpy (Steam)</a>
       </div>
 
       <!-- Legal Links Buttons -->
