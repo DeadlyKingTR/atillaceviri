@@ -74,6 +74,10 @@
       background-image: url('images/dlc_bg.jpg');
     }
 
+    #bg-codevein {
+      background-image: url('images/codevein_bg.jpg');
+    }
+
     /* Cinematic Gamer Dark Vignette Overlay */
     .bg-overlay {
       position: fixed;
@@ -127,10 +131,11 @@
 </head>
 <body class="min-h-screen flex flex-col font-sans text-slate-100 selection:bg-brand-cyan selection:text-black">
 
-  <!-- DYNAMIC TRIPLE-LAYER REAL GAME BACKGROUNDS -->
+  <!-- DYNAMIC QUADRUPLE-LAYER REAL GAME BACKGROUNDS -->
   <div id="bg-portal" class="bg-layer"></div>
   <div id="bg-expanse" class="bg-layer"></div>
   <div id="bg-dlc" class="bg-layer"></div>
+  <div id="bg-codevein" class="bg-layer"></div>
   <div class="bg-overlay"></div>
 
   <!-- NAVBAR -->
@@ -291,7 +296,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           <!-- PROJECT 1: THE EXPANSE -->
-          <div class="glass-card rounded-2xl overflow-hidden flex flex-col group border-cyan-500/40 cursor-pointer" onclick="goToExpanse()">
+          <div class="glass-card rounded-2xl overflow-hidden flex flex-col group border-cyan-500/40 cursor-pointer" onmouseenter="switchBackground('expanse')" onclick="goToExpanse()">
             <div class="relative h-52 overflow-hidden bg-slate-900">
               <img src="images/expanse_cover.jpg" alt="The Expanse: A Telltale Series" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
@@ -332,7 +337,7 @@
           </div>
 
           <!-- PROJECT 2: CODE VEIN (YAYINDA) -->
-          <div class="glass-card rounded-2xl overflow-hidden flex flex-col group border-purple-500/40 cursor-pointer" onclick="goToCodeVein()">
+          <div class="glass-card rounded-2xl overflow-hidden flex flex-col group border-purple-500/40 cursor-pointer" onmouseenter="switchBackground('codevein')" onclick="goToCodeVein()">
             <div class="relative h-52 overflow-hidden bg-slate-900">
               <img src="images/codevein_cover.jpg" alt="Code Vein" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
@@ -410,7 +415,7 @@
     </section>
 
     <!-- SECTION 2: SPOTLIGHT THE EXPANSE -->
-    <section id="expanse" class="py-24 border-t border-white/10 relative transition-all duration-700">
+    <section id="expanse" onmouseenter="switchBackground('expanse')" class="py-24 border-t border-white/10 relative transition-all duration-700">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Spotlight Banner Card -->
@@ -753,7 +758,7 @@
 
     
     <!-- SECTION 2.5: SPOTLIGHT CODE VEIN -->
-    <section id="codevein" class="py-24 border-t border-white/10 relative transition-all duration-700 bg-dark-950/60">
+    <section id="codevein" onmouseenter="switchBackground('codevein')" class="py-24 border-t border-white/10 relative transition-all duration-700 bg-dark-950/60">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Spotlight Banner Card -->
@@ -1204,6 +1209,7 @@
     const bgPortal = document.getElementById('bg-portal');
     const bgExpanse = document.getElementById('bg-expanse');
     const bgDlc = document.getElementById('bg-dlc');
+    const bgCodevein = document.getElementById('bg-codevein');
 
     let currentPortalWallpaper = 'images/bg_cyberpunk.jpg';
 
@@ -1227,19 +1233,23 @@
     }
 
     function switchBackground(mode) {
-      if (mode === 'dlc') {
-        bgPortal.style.opacity = '0';
-        bgExpanse.style.opacity = '0';
+      bgPortal.style.opacity = '0';
+      bgExpanse.style.opacity = '0';
+      bgDlc.style.opacity = '0';
+      if (bgCodevein) bgCodevein.style.opacity = '0';
+
+      if (mode === 'codevein') {
+        if (bgCodevein) {
+          bgCodevein.style.opacity = '1';
+          bgCodevein.style.transform = 'scale(1.0)';
+        }
+      } else if (mode === 'dlc') {
         bgDlc.style.opacity = '1';
         bgDlc.style.transform = 'scale(1.0)';
       } else if (mode === 'expanse') {
-        bgPortal.style.opacity = '0';
-        bgDlc.style.opacity = '0';
         bgExpanse.style.opacity = '1';
         bgExpanse.style.transform = 'scale(1.0)';
       } else {
-        bgDlc.style.opacity = '0';
-        bgExpanse.style.opacity = '0';
         bgPortal.style.opacity = '1';
         bgPortal.style.transform = 'scale(1.0)';
       }
@@ -1254,6 +1264,7 @@
     }
 
     function goToCodeVein() {
+      switchBackground('codevein');
       const cvSection = document.getElementById('codevein');
       if (cvSection) {
         cvSection.scrollIntoView({ behavior: 'smooth' });
@@ -1270,9 +1281,18 @@
 
     // Context-aware background transitions
     window.addEventListener('scroll', () => {
+      const codeveinEl = document.getElementById('codevein');
       const dlcEl = document.getElementById('dlc-section');
       const expanseEl = document.getElementById('expanse');
       
+      if (codeveinEl) {
+        const cvRect = codeveinEl.getBoundingClientRect();
+        if (cvRect.top <= window.innerHeight * 0.55 && cvRect.bottom >= window.innerHeight * 0.2) {
+          switchBackground('codevein');
+          return;
+        }
+      }
+
       if (dlcEl) {
         const dlcRect = dlcEl.getBoundingClientRect();
         if (dlcRect.top <= window.innerHeight * 0.45 && dlcRect.bottom >= window.innerHeight * 0.25) {
