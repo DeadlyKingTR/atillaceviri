@@ -158,6 +158,10 @@
           <span>The Expanse</span>
           <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-500/30">v1.0</span>
         </a>
+        <a href="#codevein" onclick="goToCodeVein()" class="hover:text-purple-400 transition flex items-center gap-2">
+          <span>Code Vein</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-purple-950 text-purple-300 border border-purple-500/30">v1.0</span>
+        </a>
         <a href="#surum-notlari" class="hover:text-brand-cyan transition">Sürüm Notları</a>
         <a href="#gelecek" onclick="switchBackground('portal')" class="hover:text-brand-cyan transition">Gelecek Projeler</a>
         <a href="#hakkinda" class="hover:text-brand-cyan transition">Hakkımızda</a>
@@ -228,7 +232,7 @@
         <!-- Portal Stats Bar -->
         <div class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
           <div class="glass-card rounded-2xl p-4 text-center">
-            <div class="text-3xl font-extrabold font-display text-brand-cyan">1</div>
+            <div class="text-3xl font-extrabold font-display text-brand-cyan">2</div>
             <div class="text-xs text-slate-300 font-medium mt-0.5">Aktif Yama</div>
           </div>
           <div class="glass-card rounded-2xl p-4 text-center">
@@ -236,7 +240,7 @@
             <div class="text-xs text-slate-300 font-medium mt-0.5">Bölüm & DLC</div>
           </div>
           <div class="glass-card rounded-2xl p-4 text-center">
-            <div class="text-3xl font-extrabold font-display text-brand-violet">10.000+</div>
+            <div class="text-3xl font-extrabold font-display text-brand-violet">35.000+</div>
             <div class="text-xs text-slate-300 font-medium mt-0.5">Çevrilen Satır</div>
           </div>
           <div class="glass-card rounded-2xl p-4 text-center">
@@ -299,18 +303,17 @@
             </div>
           </div>
 
-          <!-- PROJECT 2: CODE VEIN (HAZIRLANIYOR) -->
-          <div id="gelecek" class="glass-card rounded-2xl overflow-hidden flex flex-col group border-purple-500/40 relative">
+          <!-- PROJECT 2: CODE VEIN (YAYINDA) -->
+          <div class="glass-card rounded-2xl overflow-hidden flex flex-col group border-purple-500/40 cursor-pointer" onclick="goToCodeVein()">
             <div class="relative h-52 overflow-hidden bg-slate-900">
               <img src="images/codevein_cover.jpg" alt="Code Vein" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
-              <div class="absolute top-3 right-3 px-3 py-1 rounded-md bg-purple-600 text-white text-xs font-extrabold font-mono tracking-wider shadow-lg flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-                <span>HAZIRLANIYOR</span>
+              <div class="absolute top-3 right-3 px-3 py-1 rounded-md bg-emerald-500 text-slate-950 text-xs font-extrabold font-mono tracking-wider shadow-lg flex items-center gap-1.5">
+                <span>YAYINDA • v1.0</span>
               </div>
               <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs text-slate-200 font-mono">
-                <span class="bg-black/60 px-2 py-0.5 rounded backdrop-blur">Bandai Namco</span>
-                <span class="bg-purple-950/80 text-purple-300 border border-purple-500/40 px-2 py-0.5 rounded backdrop-blur">Aksiyon / RPG</span>
+                <span class="bg-black/60 px-2 py-0.5 rounded backdrop-blur">Ana Oyun + 3 DLC</span>
+                <span class="bg-purple-950/90 text-purple-300 border border-purple-500/40 px-2 py-0.5 rounded backdrop-blur">%100 Türkçe</span>
               </div>
             </div>
             
@@ -318,18 +321,19 @@
               <div>
                 <h3 class="text-2xl font-display font-bold text-white mb-2 group-hover:text-purple-400 transition flex items-center justify-between">
                   <span>Code Vein</span>
-                  <span class="text-xs text-purple-400 font-mono font-normal">v1.0 Geliştiriliyor</span>
+                  <span class="text-xs text-purple-400 font-mono font-normal">Bandai Namco</span>
                 </h3>
                 <p class="text-sm text-slate-300 leading-relaxed line-clamp-3">
-                  Kıyamet sonrası distopyada Dirilenler (Revenant) ile kan ve kayıp hafıza arayışı. Tüm ana hikaye, silahlar, Kan Kodları ve diyaloglar için Türkçe yerelleştirme çalışmalarımız başladı.
+                  Kıyamet sonrası distopyada Dirilmişler (Revenant) ile kan ve kayıp hafıza arayışı. 25.472 satır, tüm ana hikaye, ara sahneler, silahlar, Kan Kodları ve 3 büyük DLC paketi eksiksiz Türkçeleştirildi.
                 </p>
               </div>
 
               <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
-                <span class="text-xs font-mono text-purple-300">Geliştirme Aşamasında</span>
-                <span class="text-xs font-mono px-3 py-1 rounded-lg bg-purple-950/80 border border-purple-500/30 text-purple-300 font-bold">
-                  Çok Yakında ⏳
-                </span>
+                <span class="text-xs font-mono text-slate-400">4.5 MB • ZIP</span>
+                <button type="button" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-bold font-display text-sm tracking-wide group-hover:brightness-110 transition shadow">
+                  <span>İncele & İndir</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
               </div>
             </div>
           </div>
@@ -522,6 +526,21 @@
           <!-- Changelog Items List -->
           <div class="space-y-4">
             
+            <div class="p-4 rounded-xl bg-purple-950/40 border border-purple-500/30 flex items-start gap-4">
+              <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                  <span>CODE VEIN — v1.0 Tam Sürüm Yayınlandı!</span>
+                  <span class="text-[10px] font-mono px-2 py-0.2 rounded bg-purple-950 text-purple-300 border border-purple-800">Tüm Oyun & DLC'ler</span>
+                </h4>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                  25.472 satırlık devasa oyun veritabanı (59 namespace) Türkçeleştirildi. Ana hikâye, ara sahneler, tüm eşyalar, Yetenekler, Kan Peçeleri ve 3 büyük DLC paketi (Cehennem Ateşi Şövalyesi, Buzlar İmparatoriçesi, Yıldırım Efendisi) eksiksiz olarak eklendi.
+                </p>
+              </div>
+            </div>
+            
             <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
               <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0 mt-0.5">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -670,6 +689,159 @@
               <strong class="text-white block mb-0.5">Yasal Uyarı & Lisans Zorunluluğu:</strong>
               Bu yama oyunun kendisini, çalıştırılabilir dosyalarını veya korsan korumasını aşan yazılımları kesinlikle içermez. Yalnızca orijinal oyuna sahip kullanıcıların dil dosyalarını güncellemesi için hazırlanmış kâr amacı gütmeyen bağımsız bir moddur (5846 Sayılı FSEK). Çalışabilmesi için Steam veya Epic Games üzerinden lisanslı orijinal oyun gereklidir.
             </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <!-- SECTION 2.5: SPOTLIGHT CODE VEIN -->
+    <section id="codevein" class="py-24 border-t border-white/10 relative transition-all duration-700 bg-dark-950/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Spotlight Banner Card -->
+        <div class="glass-card rounded-3xl p-8 sm:p-12 mb-12 border-purple-500/50 relative overflow-hidden shadow-2xl">
+          <div class="absolute -right-24 -bottom-24 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Left Info -->
+            <div class="lg:col-span-7 space-y-6">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/50 bg-purple-950/80 text-purple-300 text-xs font-semibold tracking-wider uppercase font-mono shadow">
+                <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                YENİ YAYINLANAN YAMA • v1.0 SÜRÜMÜ
+              </div>
+
+              <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white uppercase leading-none">
+                CODE VEIN
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-300 mt-2">
+                  %100 Türkçe Yerelleştirme
+                </span>
+              </h2>
+
+              <p class="text-base text-slate-200 leading-relaxed drop-shadow">
+                Bandai Namco'nun kıyamet sonrası aksiyon RPG başyapıtı Code Vein'i tamamen Türkçe oynayın.
+                Dirilmişler, Yitmişler, Mistle, Kan Peçeleri ve derin hafıza lore'u baştan sona eksiksiz çevrildi.
+                Hiçbir makine çevirisi olmadan, oyunun karanlık ve epik atmosferine tam uyumlu bir deneyim sunar.
+              </p>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-2 text-xs font-mono">
+                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-purple-500/30 text-purple-300">25.472 Satır Metin</span>
+                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-white/10 text-slate-200">Hellfire Knight DLC Dahil</span>
+                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-white/10 text-slate-200">Frozen Empress DLC Dahil</span>
+                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-white/10 text-slate-200">Lord of Thunder DLC Dahil</span>
+                <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-white/10 text-emerald-400">Steam Uyumlu</span>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
+                <a href="CODE_VEIN_Turkce_Yama_v1.0_AtillaCeviri.zip" download class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white font-bold font-display text-lg tracking-wide hover:brightness-110 transition shadow-xl">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                  <span>Code Vein Yamayı İndir (v1.0)</span>
+                  <span class="text-xs px-2 py-0.5 rounded bg-black/40 font-mono">4.5 MB</span>
+                </a>
+
+                <a href="#codevein-kurulum" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-dark-900/90 border border-white/15 text-slate-200 font-medium hover:text-white hover:border-purple-400 transition">
+                  <span>Kurulum Rehberi</span>
+                  <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Visual Banner -->
+            <div class="lg:col-span-5">
+              <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-purple-500/30 group">
+                <img src="images/codevein_cover.jpg" alt="Code Vein Banner" class="w-full h-auto object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark-950/90 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 text-xs text-slate-200 font-mono flex items-center justify-between">
+                  <span>Çevirmen: Atilla Çeviri</span>
+                  <span class="text-purple-400">Eylül 2026</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SCREENSHOTS GALLERY (INTERACTIVE LIGHTBOX) -->
+        <div class="mb-16">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h3 class="text-2xl font-display font-bold text-white uppercase">Code Vein — Türkçe Ekran Görüntüleri</h3>
+              <p class="text-xs text-slate-400">Görselleri büyütmek için üzerlerine tıklayabilirsiniz</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_01_mistle.png', 'Mistle ve Oynanış Rehberi — Türkçe')">
+              <img src="images/codevein_showcase_01_mistle.png" alt="Mistle ve Oynanış Rehberi" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+              <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
+                <span>Mistle ve Oynanış Rehberi</span>
+                <span class="text-purple-400">🔍 Büyüt</span>
+              </div>
+            </div>
+            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_02_anamenu.png', 'Ana Menü ve DLC Başlıkları — Türkçe')">
+              <img src="images/codevein_showcase_02_anamenu.png" alt="Ana Menü ve DLC Başlıkları" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+              <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
+                <span>Ana Menü & 3 DLC</span>
+                <span class="text-purple-400">🔍 Büyüt</span>
+              </div>
+            </div>
+            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_03_io_diyalog.png', 'Io ile Keşif Diyaloğu — Türkçe')">
+              <img src="images/codevein_showcase_03_io_diyalog.png" alt="Io ile Keşif Diyaloğu" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+              <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
+                <span>Io ile Keşif Diyaloğu</span>
+                <span class="text-purple-400">🔍 Büyüt</span>
+              </div>
+            </div>
+            <div class="glass-card rounded-xl overflow-hidden group cursor-pointer border-purple-500/30" onclick="openLightbox('images/codevein_showcase_04_arasahne.png', 'Sinematik Ara Sahne — Türkçe')">
+              <img src="images/codevein_showcase_04_arasahne.png" alt="Sinematik Ara Sahne" class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+              <div class="p-3 text-xs text-slate-200 font-mono flex items-center justify-between">
+                <span>Sinematik Ara Sahne</span>
+                <span class="text-purple-400">🔍 Büyüt</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CODE VEIN INSTALLATION GUIDE -->
+        <div id="codevein-kurulum" class="glass-card rounded-2xl p-8 mb-12 border-purple-500/40">
+          <h3 class="text-2xl font-display font-bold text-white uppercase mb-6 flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-purple-500/20 border border-purple-500/40 text-purple-300 text-sm flex items-center justify-center font-mono">🗡️</span>
+            <span>Code Vein: Kurulum Kılavuzu</span>
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-dark-950/70 rounded-xl p-5 border border-white/5">
+              <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 font-bold font-display text-base flex items-center justify-center mb-3">1</div>
+              <h4 class="font-bold text-white text-sm mb-1">ZIP'i İndirin</h4>
+              <p class="text-xs text-slate-300">
+                <code class="text-purple-300">CODE_VEIN_Turkce_Yama_v1.0_AtillaCeviri.zip</code> dosyasını indirin ve klasöre çıkartın.
+              </p>
+            </div>
+
+            <div class="bg-dark-950/70 rounded-xl p-5 border border-white/5">
+              <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 font-bold font-display text-base flex items-center justify-center mb-3">2</div>
+              <h4 class="font-bold text-white text-sm mb-1">Paks Klasörüne Kopyalayın</h4>
+              <p class="text-xs text-slate-300">
+                <code class="text-purple-300 font-mono">pakchunk0-WindowsNoEditor__TurkishFull_P.pak</code> dosyasını oyunun <code class="text-purple-300">Content\Paks\</code> klasörüne atın.
+              </p>
+            </div>
+
+            <div class="bg-dark-950/70 rounded-xl p-5 border border-white/5">
+              <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 font-bold font-display text-base flex items-center justify-center mb-3">3</div>
+              <h4 class="font-bold text-white text-sm mb-1">Oyunu Başlatın</h4>
+              <p class="text-xs text-slate-300">
+                Oyunu Steam üzerinden başlatın; Türkçe yama ve DLC çevirileri otomatik olarak devreye girecektir.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-6 p-4 rounded-xl bg-black/60 border border-white/5 font-mono text-xs text-slate-300">
+            <span class="text-slate-500">Örnek Steam Konumu:</span><br>
+            C:\Program Files (x86)\Steam\steamapps\common\CODE VEIN\CodeVein\Content\Paks\
           </div>
         </div>
 
@@ -874,6 +1046,13 @@
       const expanseSection = document.getElementById('expanse');
       if (expanseSection) {
         expanseSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function goToCodeVein() {
+      const cvSection = document.getElementById('codevein');
+      if (cvSection) {
+        cvSection.scrollIntoView({ behavior: 'smooth' });
       }
     }
 
