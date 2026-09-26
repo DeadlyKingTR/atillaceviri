@@ -162,7 +162,24 @@
           <span>Code Vein</span>
           <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-purple-950 text-purple-300 border border-purple-500/30">v1.0</span>
         </a>
-        <a href="#surum-notlari" class="hover:text-brand-cyan transition">Sürüm Notları</a>
+        <div class="relative group">
+          <button type="button" class="hover:text-brand-cyan transition flex items-center gap-1 py-1">
+            <span>Sürüm Notları</span>
+            <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-cyan-400 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50">
+            <div class="glass-card rounded-xl p-2 min-w-[210px] shadow-2xl border border-white/10 space-y-1">
+              <a href="#expanse-surum-notlari" onclick="switchBackground('expanse')" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-cyan-950/60 text-xs text-slate-200 hover:text-cyan-300 transition">
+                <span>The Expanse (v1.0)</span>
+                <span class="text-[10px] font-mono text-cyan-400 bg-cyan-950 px-1.5 py-0.5 rounded border border-cyan-800">5 Not</span>
+              </a>
+              <a href="#codevein-surum-notlari" onclick="goToCodeVein()" class="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-purple-950/60 text-xs text-slate-200 hover:text-purple-300 transition">
+                <span>Code Vein (v1.0)</span>
+                <span class="text-[10px] font-mono text-purple-400 bg-purple-950 px-1.5 py-0.5 rounded border border-purple-800">6 Not</span>
+              </a>
+            </div>
+          </div>
+        </div>
         <a href="#gelecek" onclick="switchBackground('portal')" class="hover:text-brand-cyan transition">Gelecek Projeler</a>
         <a href="#hakkinda" class="hover:text-brand-cyan transition">Hakkımızda</a>
       </nav>
@@ -205,14 +222,19 @@
 
         <!-- CTA Buttons -->
         <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <button type="button" onclick="goToExpanse()" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-cyan to-brand-blue text-slate-950 font-bold font-display text-lg tracking-wide hover:brightness-110 transition transform hover:-translate-y-0.5 neon-cyan">
-            <span>The Expanse Türkçe Yama (v1.0)</span>
+          <button type="button" onclick="goToExpanse()" class="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-cyan to-brand-blue text-slate-950 font-bold font-display text-base sm:text-lg tracking-wide hover:brightness-110 transition transform hover:-translate-y-0.5 neon-cyan">
+            <span>The Expanse (v1.0)</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+
+          <button type="button" onclick="goToCodeVein()" class="inline-flex items-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 text-white font-bold font-display text-base sm:text-lg tracking-wide hover:brightness-110 transition transform hover:-translate-y-0.5 shadow-lg shadow-purple-900/40">
+            <span>Code Vein (v1.0)</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
           </button>
           
-          <a href="#surum-notlari" class="inline-flex items-center gap-2 px-6 py-4 rounded-xl glass-card text-cyan-300 border-cyan-500/30 hover:text-white hover:border-cyan-400 transition">
-            <span>Son Değişiklikler (v1.0)</span>
-            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <a href="#yamalar" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl glass-card text-slate-300 hover:text-white hover:border-cyan-400 transition text-sm sm:text-base font-medium">
+            <span>Tüm Projelerimiz</span>
+            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </a>
         </div>
 
@@ -291,6 +313,12 @@
                 <p class="text-sm text-slate-300 leading-relaxed line-clamp-3">
                   Camina Drummer ve Chrisjen Avasarala ile Güneş Sistemi'nin kaderini belirleyin. Tüm ana hikaye ve Archangel DLC'si eksiksiz Türkçeleştirildi.
                 </p>
+                <div class="mt-3 flex items-center gap-2">
+                  <span class="text-[11px] font-mono text-cyan-300 bg-cyan-950/80 border border-cyan-500/30 px-2.5 py-0.5 rounded flex items-center gap-1.5">
+                    <span class="text-brand-cyan font-bold">✓</span>
+                    <span>Ham Makine Çevirisi Değildir</span>
+                  </span>
+                </div>
               </div>
 
               <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
@@ -326,6 +354,12 @@
                 <p class="text-sm text-slate-300 leading-relaxed line-clamp-3">
                   Kıyamet sonrası distopyada Dirilmişler (Revenant) ile kan ve kayıp hafıza arayışı. 25.472 satır, tüm ana hikaye, ara sahneler, silahlar, Kan Kodları ve 3 büyük DLC paketi eksiksiz Türkçeleştirildi.
                 </p>
+                <div class="mt-3 flex items-center gap-2">
+                  <span class="text-[11px] font-mono text-purple-300 bg-purple-950/80 border border-purple-500/30 px-2.5 py-0.5 rounded flex items-center gap-1.5">
+                    <span class="text-purple-400 font-bold">✓</span>
+                    <span>Ham Makine Çevirisi Değildir</span>
+                  </span>
+                </div>
               </div>
 
               <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
@@ -339,7 +373,7 @@
           </div>
 
           <!-- PROJECT 3: COMMUNITY REQUEST -->
-          <div class="glass-card rounded-2xl overflow-hidden flex flex-col border-dashed border-cyan-500/30 bg-dark-900/50">
+          <div id="gelecek" class="glass-card rounded-2xl overflow-hidden flex flex-col border-dashed border-cyan-500/30 bg-dark-900/50">
             <div class="relative h-52 bg-gradient-to-br from-slate-900 via-dark-850 to-cyan-950/40 flex items-center justify-center p-6 text-center">
               <div class="space-y-2">
                 <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/40 flex items-center justify-center text-brand-cyan mx-auto shadow-lg shadow-cyan-900/30">
@@ -413,6 +447,22 @@
                 <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-white/10 text-emerald-400">Başarımlar Aktif</span>
               </div>
 
+              <!-- Metodoloji & Kalite Beyanı -->
+              <div class="p-4 rounded-xl bg-cyan-950/50 border border-cyan-500/40 text-xs text-slate-300 flex items-start gap-3 shadow-lg">
+                <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-brand-cyan flex items-center justify-center shrink-0 font-mono text-sm mt-0.5">
+                  <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-white font-bold text-sm tracking-wide flex items-center gap-2">
+                    <span>Ham Makine Çevirisi Değildir</span>
+                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-500/40 uppercase">Hibrit Metodoloji</span>
+                  </div>
+                  <p class="text-slate-300 leading-relaxed text-xs">
+                    Bu çalışma; bağlamdan yoksun, denetimsiz otomatik çeviri araçlarının (ham makine çevirisi) aksine, ileri düzey dil modelleri ile doğrudan editöryal denetimi birleştiren hibrit bir yerelleştirme metodolojisiyle hazırlanmıştır.
+                  </p>
+                </div>
+              </div>
+
               <!-- Action Buttons -->
               <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
                 <a href="TheExpanse_Turkce_Yama_AtillaCeviri.zip" download class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-cyan to-brand-blue text-slate-950 font-bold font-display text-lg tracking-wide hover:brightness-110 transition shadow-xl neon-cyan">
@@ -424,6 +474,11 @@
                 <a href="#kurulum-rehberi" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-dark-900/90 border border-white/15 text-slate-200 font-medium hover:text-white hover:border-brand-cyan transition">
                   <span>Kurulum Rehberi</span>
                   <svg class="w-4 h-4 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </a>
+
+                <a href="#expanse-surum-notlari" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-dark-900/90 border border-cyan-500/30 text-cyan-300 font-medium hover:text-white hover:border-brand-cyan transition">
+                  <span>Son Değişiklikler</span>
+                  <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </a>
               </div>
             </div>
@@ -505,8 +560,9 @@
           </div>
         </div>
 
-        <!-- SÜRÜM NOTLARI & DEĞİŞİKLİK GÜNLÜĞÜ (CHANGELOG) -->
-        <div id="surum-notlari" class="glass-card rounded-2xl p-8 mb-14 border-cyan-500/30">
+        <!-- SÜRÜM NOTLARI & DEĞİŞİKLİK GÜNLÜĞÜ (THE EXPANSE CHANGELOG) -->
+        <span id="surum-notlari" class="sr-only"></span>
+        <div id="expanse-surum-notlari" class="glass-card rounded-2xl p-8 mb-14 border-cyan-500/30">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4 border-b border-white/10 pb-6">
             <div>
               <div class="flex items-center gap-3">
@@ -516,7 +572,7 @@
                   v1.0 (Son Sürüm)
                 </span>
               </div>
-              <h3 class="text-2xl sm:text-3xl font-display font-bold text-white uppercase mt-1">Yapılan En Son Değişiklikler</h3>
+              <h3 class="text-2xl sm:text-3xl font-display font-bold text-white uppercase mt-1">The Expanse: Yapılan En Son Değişiklikler</h3>
             </div>
             <div class="text-xs font-mono text-slate-400">
               Yayın Tarihi: <span class="text-cyan-300">26 Eylül 2026</span>
@@ -526,21 +582,6 @@
           <!-- Changelog Items List -->
           <div class="space-y-4">
             
-            <div class="p-4 rounded-xl bg-purple-950/40 border border-purple-500/30 flex items-start gap-4">
-              <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white flex items-center gap-2">
-                  <span>CODE VEIN — v1.0 Tam Sürüm Yayınlandı!</span>
-                  <span class="text-[10px] font-mono px-2 py-0.2 rounded bg-purple-950 text-purple-300 border border-purple-800">Tüm Oyun & DLC'ler</span>
-                </h4>
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
-                  25.472 satırlık devasa oyun veritabanı (59 namespace) Türkçeleştirildi. Ana hikâye, ara sahneler, tüm eşyalar, Yetenekler, Kan Peçeleri ve 3 büyük DLC paketi (Cehennem Ateşi Şövalyesi, Buzlar İmparatoriçesi, Yıldırım Efendisi) eksiksiz olarak eklendi.
-                </p>
-              </div>
-            </div>
-            
             <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
               <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0 mt-0.5">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -548,7 +589,7 @@
               <div>
                 <h4 class="text-sm font-bold text-white flex items-center gap-2">
                   <span>Diyalog Tonu ve Karakter Samimiyeti İyileştirmesi</span>
-                  <span class="text-[10px] font-mono px-2 py-0.2 rounded bg-cyan-950 text-cyan-400 border border-cyan-800">Bölüm 4 & 5</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-400 border border-cyan-800">Bölüm 4 & 5</span>
                 </h4>
                 <p class="text-xs text-slate-300 mt-1 leading-relaxed">
                   Doktor Virgil ile Camina Drummer arasındaki sahnelerde kullanılan resmi ("siz / biz") kalıplar baştan sona revize edildi; karakterlerin derin dostluğuna ve hikaye atmosferine uygun samimi ("sen") diline dönüştürüldü.
@@ -563,7 +604,7 @@
               <div>
                 <h4 class="text-sm font-bold text-white flex items-center gap-2">
                   <span>Archangel DLC Seçim Metni ve İmla Düzeltmesi</span>
-                  <span class="text-[10px] font-mono px-2 py-0.2 rounded bg-amber-950 text-amber-400 border border-amber-800">Archangel DLC</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-950 text-amber-400 border border-amber-800">Archangel DLC</span>
                 </h4>
                 <p class="text-xs text-slate-300 mt-1 leading-relaxed">
                   Chrisjen Avasarala ek paketinde yer alan kritik karar ekranındaki yazım hatası (<em>"Annini dinle" &rarr; "Anneni dinle"</em>) düzeltildi ve tüm seçim butonları görsel standartlara uyarlandı.
@@ -578,7 +619,7 @@
               <div>
                 <h4 class="text-sm font-bold text-white flex items-center gap-2">
                   <span>Hızlı Altyazı ve Ses Senkronizasyon Ayarlamaları</span>
-                  <span class="text-[10px] font-mono px-2 py-0.2 rounded bg-blue-950 text-blue-400 border border-blue-800">Tüm Bölümler</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-950 text-blue-400 border border-blue-800">Tüm Bölümler</span>
                 </h4>
                 <p class="text-xs text-slate-300 mt-1 leading-relaxed">
                   Oyunun Wwise ses motoruna bağlı olarak ekranda çok hızlı geçen altyazılar tespit edildi; Türkçe cümle uzunlukları seslendirme süreleriyle senkronize olacak şekilde sıkılaştırıldı ve okuma kolaylığı sağlandı.
@@ -593,10 +634,25 @@
               <div>
                 <h4 class="text-sm font-bold text-white flex items-center gap-2">
                   <span>Zen IoStore ve Legacy Pak Motoru Sıfır Hata Doğrulaması</span>
-                  <span class="text-[10px] font-mono px-2 py-0.2 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">Teknik Altyapı</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">Teknik Altyapı</span>
                 </h4>
                 <p class="text-xs text-slate-300 mt-1 leading-relaxed">
                   39 yerelleştirme dosyasının tamamı Unreal Engine 4.27 standartlarında derlendi. Steam ve Epic Games sürümlerinde çökme yapmayan çift katmanlı paket mimarisi (2.5 MB) hazırlandı.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
+              <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                  <span>Lang Belta ve Belter Kültürel Terim Bütünlüğü</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-800">Evren Terminolojisi</span>
+                </h4>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                  Kemerli (Belter) argo ve deyimleri The Expanse dizi külliyatıyla tam uyumlu hale getirildi; "beratna", "sasa ke", "pampa", "bosmang" gibi ikonik ifadeler bağlamına göre korundu veya Türkçeleştirildi.
                 </p>
               </div>
             </div>
@@ -723,7 +779,7 @@
               <p class="text-base text-slate-200 leading-relaxed drop-shadow">
                 Bandai Namco'nun kıyamet sonrası aksiyon RPG başyapıtı Code Vein'i tamamen Türkçe oynayın.
                 Dirilmişler, Yitmişler, Mistle, Kan Peçeleri ve derin hafıza lore'u baştan sona eksiksiz çevrildi.
-                Hiçbir makine çevirisi olmadan, oyunun karanlık ve epik atmosferine tam uyumlu bir deneyim sunar.
+                Oyunun karanlık ve epik vampir atmosferine, anime estetiğine ve derin hikâye örgüsüne tam uyumlu bir deneyim sunar.
               </p>
 
               <!-- Tags -->
@@ -733,6 +789,22 @@
                 <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-white/10 text-slate-200">Frozen Empress DLC Dahil</span>
                 <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-white/10 text-slate-200">Lord of Thunder DLC Dahil</span>
                 <span class="px-3 py-1.5 rounded-lg bg-dark-900/80 border border-white/10 text-emerald-400">Steam Uyumlu</span>
+              </div>
+
+              <!-- Metodoloji & Kalite Beyanı -->
+              <div class="p-4 rounded-xl bg-purple-950/50 border border-purple-500/40 text-xs text-slate-300 flex items-start gap-3 shadow-lg">
+                <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-300 flex items-center justify-center shrink-0 font-mono text-sm mt-0.5">
+                  <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-white font-bold text-sm tracking-wide flex items-center gap-2">
+                    <span>Ham Makine Çevirisi Değildir</span>
+                    <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-500/40 uppercase">Hibrit Metodoloji</span>
+                  </div>
+                  <p class="text-slate-300 leading-relaxed text-xs">
+                    Bu çalışma; bağlamdan yoksun, denetimsiz otomatik çeviri araçlarının (ham makine çevirisi) aksine, ileri düzey dil modelleri ile doğrudan editöryal denetimi birleştiren hibrit bir yerelleştirme metodolojisiyle hazırlanmıştır.
+                  </p>
+                </div>
               </div>
 
               <!-- Action Buttons -->
@@ -747,6 +819,11 @@
                   <span>Kurulum Rehberi</span>
                   <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </a>
+
+                <a href="#codevein-surum-notlari" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-dark-900/90 border border-purple-500/30 text-purple-300 font-medium hover:text-white hover:border-purple-400 transition">
+                  <span>Son Değişiklikler</span>
+                  <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </a>
               </div>
             </div>
 
@@ -759,6 +836,120 @@
                   <span>Çevirmen: Atilla Çeviri</span>
                   <span class="text-purple-400">Eylül 2026</span>
                 </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SÜRÜM NOTLARI & DEĞİŞİKLİK GÜNLÜĞÜ (CODE VEIN CHANGELOG) -->
+        <div id="codevein-surum-notlari" class="glass-card rounded-2xl p-8 mb-14 border-purple-500/40">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4 border-b border-white/10 pb-6">
+            <div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-mono text-purple-400 uppercase tracking-widest font-bold">GÜNCELLEME GEÇMİŞİ</span>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-xs font-mono font-bold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  v1.0 (İlk Yayın)
+                </span>
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-display font-bold text-white uppercase mt-1">Code Vein: Yapılan En Son Değişiklikler</h3>
+            </div>
+            <div class="text-xs font-mono text-slate-400">
+              Yayın Tarihi: <span class="text-purple-300">26 Eylül 2026</span>
+            </div>
+          </div>
+
+          <!-- Changelog Items List -->
+          <div class="space-y-4">
+            
+            <div class="p-4 rounded-xl bg-purple-950/40 border border-purple-500/30 flex items-start gap-4">
+              <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                  <span>25.472 Satırlık Kapsamlı Veritabanı ve 59 Namespace Yerelleştirmesi</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-800">v1.0 Tam Sürüm</span>
+                </h4>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                  Oyunun tüm metin havuzu (kullanıcı arayüzü, ana hikâye, sinematikler, Kan Kodları, Yetenekler, Kan Peçeleri, silahlar ve eşya açıklamaları) sıfır eksik satırla Türkçeleştirildi.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
+              <div class="w-8 h-8 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                  <span>Tüm DLC Paketleri Eksiksiz Entegre Edildi</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-pink-950 text-pink-300 border border-pink-800">3 Büyük DLC</span>
+                </h4>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                  Hellfire Knight (Cehennem Ateşi Şövalyesi), Frozen Empress (Buzlar İmparatoriçesi) ve Lord of Thunder (Yıldırım Efendisi) eklentilerinin tüm boss diyalogları, bellek kalıntıları ve meydan okuma gereksinimleri eksiksiz olarak pakete dahil edildi.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
+              <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                  <span>Ham Makine Çevirisi Hataları ve Yanıltıcı Çeviriler Ayıklandı</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800">Kalite Kontrol</span>
+                </h4>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                  Ham makine çevirilerinde görülen absürt terimler ("poll" yerine "bir anket", "white goods" yerine "Beyaz Eşya", "vestige" yerine "gelir hakları/yelek") tespit edilerek oyunun karanlık vampir/anime fantezisi atmosferine uygun terimlerle ("Gözlem Anketi/Pusula Noktası", "Kalıntı Parçası/Bellek", "Lüks Eşyalar") tamamen yenilendi.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
+              <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                  <span>Ara Sahne ve Diyalog Zamanlama Senkronizasyonu</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800">Altyazı Düzeltmeleri</span>
+                </h4>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                  Orijinal oyun dosyalarında bulunan 1 satırlık kaymalar (off-by-one ID shift) tek tek analiz edilerek diyalogların konuşan karakterlerle ve sinematik animasyonlarla %100 örtüşmesi sağlandı.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
+              <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                  <span>Io Yoldaş Diyaloğu ve Karakter Üslubu İyileştirmesi</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800">Karakter Düzenlemesi</span>
+                </h4>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                  Io'nun Base03 yürüyüş sahnesindeki aceleci çevirisi ("Acelemiz yok, yavaşça gidebiliriz.") olarak düzeltildi; Louis, Yakumo, Mia, Jack ve Eva gibi tüm yoldaşların ses tonlarına uygun editöryal üslup sağlandı.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-dark-900/70 border border-white/5 flex items-start gap-4">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                  <span>Tek Parça Tak-Çalıştır Pak Dağıtımı</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">Teknik Altyapı</span>
+                </h4>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                  <code class="text-emerald-300 font-mono">pakchunk0-WindowsNoEditor__TurkishFull_P.pak</code> (4.5 MB) mimarisiyle hiçbir harici enjektör veya mod yöneticisi gerektirmeden Steam sürümüne tam uyumlu, çökmesiz ve başarımları engellemeyen kompakt paket sunuldu.
+                </p>
               </div>
             </div>
 
@@ -861,6 +1052,19 @@
         <p class="mt-3 text-xs sm:text-sm text-slate-400 max-w-2xl mx-auto">
           Çevirilerimizin hiçbirinde ticari kazanç gözetilmez; abonelik sistemi, reklam veya bağış zorunluluğu bulunmaz.
         </p>
+
+        <!-- Portal Geneli Metodoloji Güvencesi -->
+        <div class="mt-8 p-5 rounded-2xl bg-dark-900/90 border border-white/10 text-xs text-slate-300 max-w-2xl mx-auto text-left flex items-start gap-3.5 shadow-xl">
+          <div class="w-8 h-8 rounded-xl bg-cyan-950 border border-cyan-500/40 text-brand-cyan flex items-center justify-center shrink-0 font-mono text-sm mt-0.5">
+            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div class="space-y-1">
+            <strong class="text-white block font-bold text-sm tracking-wide">Ham Makine Çevirisi Değildir</strong>
+            <p class="text-slate-300 leading-relaxed text-xs">
+              Bu sitede yayınlanan tüm çalışmalar; bağlamdan yoksun, denetimsiz otomatik çeviri araçlarının (ham makine çevirisi) aksine, ileri düzey dil modelleri ile doğrudan editöryal denetimi birleştiren hibrit bir yerelleştirme metodolojisiyle hazırlanmıştır. Her metin oyun içi bağlam, karakter üslubu ve terminoloji tutarlılığı gözetilerek titizlikle denetlenmektedir.
+            </p>
+          </div>
+        </div>
 
         <div class="mt-8 flex justify-center">
           <a href="https://steamcommunity.com/profiles/76561198267659119/" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-dark-850 border border-slate-700 hover:border-brand-cyan text-white text-sm font-medium transition shadow-lg hover:shadow-cyan-500/20">
